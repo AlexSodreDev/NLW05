@@ -6,7 +6,6 @@ interface ISettingsCreate {
   username: string;
 }
 
-
 class SettingsService {
 
   async create({ chat, username }: ISettingsCreate) {
