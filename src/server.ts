@@ -10,7 +10,7 @@ app.get("/", (request, response) => {
    });
 });
 
-app.post("/users", (request, response) => {
+app.post("/", (request, response) => {
    return response.json({
       message: "Usuário salvo com sucesso!"
    });
