@@ -1,4 +1,8 @@
-import { MigrationInterface, QueryRunner, Table, TreeLevelColumn } from "typeorm";
+import {
+    MigrationInterface,
+    QueryRunner,
+    Table,
+} from "typeorm";
 
 export class CreateSettings1618975070251 implements MigrationInterface {
 
