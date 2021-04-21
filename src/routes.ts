@@ -17,6 +17,8 @@ routes.post("/settings", async (request, response) => {
 
   await settingsRepository.save(settings);
 
+  return response.json(settings);
+
 });
 
 export { routes };
