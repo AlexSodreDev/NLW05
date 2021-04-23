@@ -8,8 +8,8 @@ document.querySelector("#start_chat").addEventListener("click", (event) => {
   const socket = io();
 
 
-  const email = document.getElementById("email").nodeValue;
-  const text = document.getElementById("text_help").nodeValue;
+  const email = document.getElementById("email").value;
+  const text = document.getElementById("txt_help").value;
 
   socket.on("connect", () => {
     const params = {
