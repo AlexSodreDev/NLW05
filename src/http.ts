@@ -5,7 +5,6 @@ import path from "path";
 
 import "./database";
 import { routes } from "./routes";
-import { RepositoryNotTreeError } from "typeorm";
 
 const app = express();
 
