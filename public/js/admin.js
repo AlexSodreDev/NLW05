@@ -23,5 +23,12 @@ function call(id) {
 
   const connection = connectionsUsers.find(connection => connection.socket_id === id);
 
+  const template = document.getElementById("admin_templte").innerHTML;
 
+  const rendered = Mustache.render(template, {
+    email: connection.user.email,
+    id: connection.user_id,
+  });
+
+  document.getElementById("supports").innerHTML += rendered
 }
