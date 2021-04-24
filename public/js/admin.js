@@ -37,6 +37,7 @@ function call(id) {
     user_id: connection.user_id
   }
 
-  socket.email("admin_list_messages_by_user", params,)
-  console.log("Messages", messages)
+  socket.emit("admin_list_messages_by_user", params, messages => {
+    console.log("Messages", messages)
+  })
 }
