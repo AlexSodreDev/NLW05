@@ -20,15 +20,16 @@ socket.on("admin_list_all_users", (connections) => {
 });
 
 function call(id) {
+  const connection = connectionsUsers.find(
+    (connection) => connection.socket_id === id
+  );
 
-  const connection = connectionsUsers.find(connection => connection.socket_id === id);
-
-  const template = document.getElementById("admin_templte").innerHTML;
+  const template = document.getElementById("admin_template").innerHTML;
 
   const rendered = Mustache.render(template, {
     email: connection.user.email,
     id: connection.user_id,
   });
 
-  document.getElementById("supports").innerHTML += rendered
+  document.getElementById("supports").innerHTML += rendered;
 }
