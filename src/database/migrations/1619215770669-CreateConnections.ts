@@ -35,7 +35,7 @@ export class CreateConnections1619215770669 implements MigrationInterface {
         );
 
         await queryRunner.createForeignKey(
-            "connetions",
+            "connections",
             new TableForeignKey({
                 name: "FKConnectionUser",
                 referencedTableName: "users",
