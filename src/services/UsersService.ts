@@ -32,17 +32,7 @@ class UsersService {
       email,
     });
 
-    if (findByEmail) {
-      return findByEmail;
-    }
-
-    const user = this.usersRepository.create({
-      email,
-    });
-
-    await this.usersRepository.save(user);
-
-    return user;
+    return findByEmail;
   }
 }
 
