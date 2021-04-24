@@ -1,6 +1,6 @@
 import { MigrationInterface, QueryRunner, Table, TableForeignKey } from "typeorm";
 
-export class CreateConnections1619215770669 implements MigrationInterface {
+export class CreateConnection1619236309566 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
@@ -22,7 +22,7 @@ export class CreateConnections1619215770669 implements MigrationInterface {
                     },
                     {
                         name: "socket_id",
-                        type: "varchar"
+                        type: "varchar",
                     },
                     {
                         name: "created_at",
@@ -57,3 +57,4 @@ export class CreateConnections1619215770669 implements MigrationInterface {
     }
 
 }
+
