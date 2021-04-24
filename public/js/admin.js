@@ -32,4 +32,11 @@ function call(id) {
   });
 
   document.getElementById("supports").innerHTML += rendered;
+
+  const params = {
+    user_id: connection.user_id
+  }
+
+  socket.email("admin_list_messages_by_user", params,)
+  console.log("Messages", messages)
 }
